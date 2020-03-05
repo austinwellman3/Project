@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--Created By Austin Wellman-->
+<html>
+    <!--linked css-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <head>
+        <!--name on tab-->
+        <title>Mission Control Operator Login</title>
+    </head>
+    <body>
+        <!--paragraph on website-->
+        <p>
+            Please Enter your first name and last name in the space provided. Please also enter your badge number and press submit.
+        </p>
+        <!--making the text tabs for name input-->
+        <form id="credSubmit" onsubmit="return false;">
+        First Name: <input type="text" id="fName" />  <br>
+        Last Name: <input type="text" id="lName" />  <br>
+        Badge Number: <input type="number" id="badgeID" />  <br>
+        <input type="submit" onclick="checkCreds();" />
+        </form>
+
+        <script>
+            //script functions for the name variables and the overall functionality of the name and badge input.
+            function checkCreds() {
+                var FirstName = document.getElementById("fName").value;
+                var LastName = document.getElementById("lName").value;
+                var BadgeNumb = document.getElementById("badgeID").value;
+                var fullName = FirstName + " " + LastName;
+                while(fullName.length>20) {
+                    alert("too many characters!!!");
+                } 
+                while(BadgeNumb > 999 || BadgeNumb < 1) {
+                    alert("badge number out of specification!!!")
+                }
+                alert("Access Granted, welcome " + fullName);
+            }
+        </script>
+    </body>
+</html>

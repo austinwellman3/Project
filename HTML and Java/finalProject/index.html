@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--Made By Austin Wellman-->
+<html>
+    <script src="scripts.js"></script> <!--adding script js file within the html-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <head>
+        <title><!--this is the title on the webpage-->
+            UAT Space Assignmnt
+        </title>
+    </head>
+    <body>
+        <p class="Top">
+            <table class="tableTop">
+                <tr> <!--tr defines a row-->
+                    <td> <!--td defines a left aligned regular th bold and centered-->
+                        <img src="images/UATSpace-1.png" /> <!--this is sourcing and selecting the image for the site-->
+                    </td>
+                    <td>
+                        <h1>
+                            UAT Space Program
+                      </h1>
+                    </td>
+                </tr>
+            </table>
+        </p>
+        <table id="data" border="2" width="70%" class="table2"> <!--adding sizing of the tables-->
+            <col style="width: 35%;">
+            <col style="width: 35%;">
+            <thead>
+                <tr style="font-family: fantasy;">
+                    <th align="left">Data Type</th> <!--This is a table header-->
+                    <th align="left">Reading</th>
+                </tr>
+            </thead>
+            <tbody> <!--This is inputting what information will be in the tables-->
+                <tr id="seconds"></tr>
+                <tr id="latitude"></tr>
+                <tr id="longitude"></tr>
+                <tr id="gps_altitude"></tr>
+                <tr id="bmpSensor_alititude"></tr>
+                <tr id="bmpSensor_pressure"></tr>
+                <tr id="bmpSensor_temp"></tr>
+                <tr id="digSensor_temp"></tr>
+                <tr id="cssSensor_temp"></tr>
+                <tr id="cssSensor_eCO2"></tr>
+                <tr id="cssSensor_TVOC"></tr>
+                <tr id="UV"></tr>
+                <tr id="accelX"></tr>
+                <tr id="accelY"></tr>
+                <tr id="accelZ"></tr>
+                <tr id="magneticX"></tr>
+                <tr id="magneticY"></tr>
+                <tr id="magneticZ"></tr>
+                <tr id="gyroX"></tr>
+                <tr id="gyroY"></tr>
+                <tr id="gyroZ"></tr>
+            </tbody>
+        </table>
+        <br>
+        <input id="startButton" type="button" value="Start" onclick="start();" class="button" /><!--This is making the start button-->
+        <input id="stopButton" type="button" value="Stop" onclick="stop();" disabled=true class="button" /><!--This is making the stop button-->
+    </body>
+</html>

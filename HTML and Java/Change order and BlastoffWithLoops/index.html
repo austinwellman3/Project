@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--Made by Austin Wellman-->
+<html>
+    <!--This is linking our css file with the actual html file so the can work together-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <head>
+        <!--This is displaying the tab on the website-->
+        <title>
+            Efficency at Mission Control
+        </title>
+    </head>
+    <body>
+        <!--the img src is displaying images to the site and it is directing it to where they are located-->
+        <img src="images/UATspaceLogo-2.jpg">
+        <!--br makes a new line-->
+        <br>
+        <!--below is an image of a spaceship if I want to include it later on-->
+        <!--<img src="images/SpaceX-CRS-16-Falcon-9.jpg">-->
+
+        <script>
+            
+            //This script section is making loops well counting down from 10-0 then displaying blastoff.
+            //halfway down the countdown it will give you a warning letting you know you are halfway to launch
+
+            //This is showing where the countdown will start.
+            var count = 10;
+            //This is the main loop for the timerout function
+        for(i=0; i < 11; i++) {
+            setTimeout(function() {
+                document.write("Countdown " + count + "<br>");
+
+                //This is the new stuff for the change order
+                if(count <= 5) {
+                    document.write("Warning, less then 1/2 way to launch, " + count + "seconds left<br>");
+                }
+                 count=count-1;
+                 
+                 //this is the delay
+                 }, 1000*i)
+        }
+        setTimeout(function() {
+            document.write("BLASTOFF!!!");
+        }, 11000)
+        
+    </script>
+
+    </body>
+</html>

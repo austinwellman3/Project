@@ -1,0 +1,56 @@
+change = int(input())
+
+if change <= 0:
+	print('No change')
+
+else:
+  dollars = change // 100
+  quarters = (change - (dollars * 100)) // 25
+  dimes = (change - (dollars * 100) - (quarters * 25)) // 10
+  nickles = (change - (dollars * 100) - ((quarters * 25) + (dimes * 10))) // 5
+  pennies = (change - (dollars * 100) - (quarters * 25) - (dimes * 10) - (nickles * 5)) // 1
+  
+  if dollars >= 1:
+    if dollars ==1:
+      print(dollars , 'Dollar')
+    elif dollars > 1:
+     print(dollars , 'Dollars')
+  
+
+
+  if quarters > 0:
+    if quarters == 1:
+      print(quarters , 'Quarter')
+    elif quarters > 1:
+     print(quarters , 'Quarters')
+
+
+  if dimes > 0:
+    if dimes == 1:
+      print(dimes , 'Dime')
+    else:
+      print(dimes , 'Dimes')
+  else:
+    print
+
+  if nickles > 0:
+    if nickles == 1:
+      print(nickles , 'Nickel')
+    else:
+      print(nickles , 'Nickles') 
+  else:
+    print
+
+  if pennies > 0:
+    if pennies == 1:
+      print(pennies , 'Penny')
+    else:
+      print(pennies, 'Pennies')
+  else:
+    print
+
+  
+
+  
+
+

@@ -1,0 +1,8 @@
+current_price = int(input())
+last_months_price = int(input())
+change_price = (current_price - last_months_price)
+mortgage = ((current_price * .051) / 12)
+
+print('This house is $' + str(current_price) + '.' + ' The change is $' + str(change_price) + ' since last month.')   
+print('The estimated monthly mortgage is $' + '{:.2f}'.format(mortgage) + '.')
+
